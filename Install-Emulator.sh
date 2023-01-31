@@ -24,7 +24,7 @@ echo 'export PATH=$PATH:$ANDROID_HOME/android-sdk/cmdline-tools' >> ~/.bashrc
 source ~/.bashrc
 
 # install required packages with the Android SDK Manager
-yes | sdkmanager "platform-tools" "platforms;android-28" "emulator"
+yes | /android-sdk/cmdline-tools/bin/sdkmanager "platform-tools" "platforms;android-28" "emulator"
 
 # clean up
 
