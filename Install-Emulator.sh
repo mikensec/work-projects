@@ -17,8 +17,8 @@ unzip commandlinetools-linux-9477386_latest.zip -d android-sdk
 echo 'export ANDROID_HOME=~/android-sdk' >> ~/.bashrc
 
 # set PATH environment variable
-echo 'export PATH=$PATH:$ANDROID_HOME/tools' >> ~/.bashrc
-echo 'export PATH=$PATH:$ANDROID_HOME/platform-tools' >> ~/.bashrc
+echo 'export PATH=$PATH:$ANDROID_HOME/android-sdk/cmdline-tools' >> ~/.bashrc
+
 
 # source bashrc
 source ~/.bashrc
@@ -26,4 +26,5 @@ source ~/.bashrc
 # install required packages with the Android SDK Manager
 yes | sdkmanager "platform-tools" "platforms;android-28" "emulator"
 
+# clean up
 
