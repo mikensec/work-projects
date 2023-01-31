@@ -1,16 +1,17 @@
 #!/bin/bash
 
 # update package index
-sudo apt-get update
+sudo apt update
 
 # install JDK
-sudo apt-get install default-jdk -y
+sudo apt install default-jdk -y
 
 # download Android SDK
-wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip
 
 # extract Android SDK
-unzip sdk-tools-linux-4333796.zip -d android-sdk
+sudo apt install unzip
+unzip commandlinetools-linux-9477386_latest.zip -d android-sdk
 
 # set ANDROID_HOME environment variable
 echo 'export ANDROID_HOME=~/android-sdk' >> ~/.bashrc
@@ -25,5 +26,4 @@ source ~/.bashrc
 # install required packages with the Android SDK Manager
 yes | sdkmanager "platform-tools" "platforms;android-28" "emulator"
 
-# clean up
-rm sdk-tools-linux-4333796.zip
+
